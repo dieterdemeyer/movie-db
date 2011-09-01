@@ -22,6 +22,11 @@
       <sourceFolder url="file://$MODULE_DIR$/domain/src/test/resources" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/domain/target/generated-sources/test-annotations" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/domain/target/generated-sources/annotations" isTestSource="false" />
+      <excludeFolder url="file://$MODULE_DIR$/domain/target/classes" />
+      <excludeFolder url="file://$MODULE_DIR$/domain/target/maven-archiver" />
+      <excludeFolder url="file://$MODULE_DIR$/domain/target/surefire" />
+      <excludeFolder url="file://$MODULE_DIR$/domain/target/surefire-reports" />
+      <excludeFolder url="file://$MODULE_DIR$/domain/target/test-classes" />
     </content>
     <orderEntry type="jdk" jdkName="JDK 1.6" jdkType="JavaSDK" />
     <orderEntry type="sourceFolder" forTests="false" />

@@ -10,6 +10,11 @@
       <sourceFolder url="file://$MODULE_DIR$/application/src/test/resources" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/application/target/generated-sources/test-annotations" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/application/target/generated-sources/annotations" isTestSource="false" />
+      <excludeFolder url="file://$MODULE_DIR$/application/target/classes" />
+      <excludeFolder url="file://$MODULE_DIR$/application/target/maven-archiver" />
+      <excludeFolder url="file://$MODULE_DIR$/application/target/surefire" />
+      <excludeFolder url="file://$MODULE_DIR$/application/target/surefire-reports" />
+      <excludeFolder url="file://$MODULE_DIR$/application/target/test-classes" />
     </content>
     <orderEntry type="jdk" jdkName="JDK 1.6" jdkType="JavaSDK" />
     <orderEntry type="sourceFolder" forTests="false" />

@@ -15,6 +15,10 @@
       <sourceFolder url="file://$MODULE_DIR$/infrastructure/src/test/resources" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/infrastructure/target/generated-sources/test-annotations" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/infrastructure/target/generated-sources/annotations" isTestSource="false" />
+      <excludeFolder url="file://$MODULE_DIR$/infrastructure/target/classes" />
+      <excludeFolder url="file://$MODULE_DIR$/infrastructure/target/maven-archiver" />
+      <excludeFolder url="file://$MODULE_DIR$/infrastructure/target/surefire" />
+      <excludeFolder url="file://$MODULE_DIR$/infrastructure/target/test-classes" />
     </content>
     <orderEntry type="jdk" jdkName="JDK 1.6" jdkType="JavaSDK" />
     <orderEntry type="sourceFolder" forTests="false" />

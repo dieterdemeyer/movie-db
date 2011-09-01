@@ -28,6 +28,12 @@
       <sourceFolder url="file://$MODULE_DIR$/presentation/src/test/resources" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/presentation/target/generated-sources/test-annotations" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/presentation/target/generated-sources/annotations" isTestSource="false" />
+      <excludeFolder url="file://$MODULE_DIR$/presentation/target/MovieDB" />
+      <excludeFolder url="file://$MODULE_DIR$/presentation/target/classes" />
+      <excludeFolder url="file://$MODULE_DIR$/presentation/target/maven-archiver" />
+      <excludeFolder url="file://$MODULE_DIR$/presentation/target/surefire" />
+      <excludeFolder url="file://$MODULE_DIR$/presentation/target/surefire-reports" />
+      <excludeFolder url="file://$MODULE_DIR$/presentation/target/test-classes" />
     </content>
     <orderEntry type="jdk" jdkName="JDK 1.6" jdkType="JavaSDK" />
     <orderEntry type="sourceFolder" forTests="false" />
