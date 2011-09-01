@@ -1,0 +1,72 @@
+<project name="MovieDB">
+
+	<property name="database.url.web" value="jdbc:hsqldb:hsql://localhost/moviedb_web" />
+	<property name="database.url.scenario" value="jdbc:hsqldb:hsql://localhost/moviedb_scenario" />
+
+	<path id="classpath">
+		<pathelement location="lib/hsqldb-1.8.0.10.jar" />
+	</path>
+
+	<target name="start-database" depends="-db-server-running, -db-already-running, -start-database" description="Start the HSQLDB database server" />
+	<target name="stop-database" depends="-db-server-running, -db-not-running, -stop-database" description="Stop the HSQLDB database server" />
+	<target name="clean-database" depends="-db-server-running, -start-database, -create-schema" description="(Re)create the database schema" />
+	<target name="database-manager" depends="-db-server-running, -start-database, -database-manager" description="Start the database manager" />
+
+	<target name="-start-database" unless="db.server.running">
+		<echo message="Starting database server ..." />
+		<java classname="org.hsqldb.Server" classpathref="classpath" fork="true" spawn="true" />
+		<waitfor>
+			<socket server="localhost" port="9001" />
+		</waitfor>
+		<echo message="Database server started" />
+	</target>
+
+    <target name="-stop-database" if="db.server.running">
+		<echo message="Stopping database server ..." />
+        <java classname="org.hsqldb.util.ShutdownServer" classpathref="classpath" fork="true">
+            <arg line="-url ${database.url.web}" />
+        </java>
+        <java classname="org.hsqldb.util.ShutdownServer" classpathref="classpath" fork="true">
+            <arg line="-url ${database.url.scenario}" />
+        </java>
+		<waitfor>
+			<not>
+				<socket server="localhost" port="9001" />
+			</not>
+		</waitfor>
+		<echo message="Database server stopped" />
+    </target>
+
+	<target name="-db-already-running" if="db.server.running">
+		<echo>Database is still running in the background ...</echo>
+	</target>
+
+	<target name="-db-not-running" unless="db.server.running">
+		<echo>Database is not running ...</echo>
+	</target>
+
+	<target name="-db-server-running">
+		<condition property="db.server.running">
+			<socket server="localhost" port="9001" />
+		</condition>
+	</target>
+	
+	<target name="-create-schema">
+		<path id="sql.scripts">
+			<fileset dir="scripts" includes="**/*.sql" />
+		</path>
+		<sql driver="org.hsqldb.jdbcDriver" userid="sa" password="" url="${database.url.web}" classpathref="classpath">
+			<path refid="sql.scripts" />
+		</sql>
+		<sql driver="org.hsqldb.jdbcDriver" userid="sa" password="" url="${database.url.scenario}" classpathref="classpath">
+			<path refid="sql.scripts" />
+		</sql>
+	</target>
+	
+	<target name="-database-manager">
+		<java classname="org.hsqldb.util.DatabaseManagerSwing" classpathref="classpath" fork="true" spawn="true">
+			<arg line="--driver org.hsqldb.jdbcDriver --url ${database.url.web} --user sa" />
+		</java>
+	</target>
+
+</project>

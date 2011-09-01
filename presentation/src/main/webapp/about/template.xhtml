@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ui:composition template="/template.xhtml" xmlns="http://www.w3.org/1999/xhtml" 
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:h="http://java.sun.com/jsf/html">
+
+    <ui:param name="menuActive" value="about" />
+
+    <ui:define name="sidebar">
+		<ul>
+            <li><h:commandLink value="#{labels.about}" action="about" /></li>
+		</ul>
+    </ui:define>
+
+</ui:composition>

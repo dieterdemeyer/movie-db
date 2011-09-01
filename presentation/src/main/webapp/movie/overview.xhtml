@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ui:composition template="/movie/template.xhtml" xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:h="http://java.sun.com/jsf/html">
+
+    <ui:param name="title" value="#{titles.movie_overview}" />
+
+    <ui:define name="body">
+        <h:outputText value="#{messages.empty_table}" rendered="#{empty overviewController.movies}" />
+        <h:dataTable id="overview" value="#{overviewController.movies}" var="movie" columns="2"
+            rendered="#{not empty overviewController.movies}">
+            <h:column id="imdb">
+                <f:facet name="header">#{labels.imdb}</f:facet>
+				#{movie.imdb}
+			</h:column>
+            <h:column id="title">
+                <f:facet name="header">#{labels.title}</f:facet>
+				#{movie.title}
+			</h:column>
+        </h:dataTable>
+    </ui:define>
+
+</ui:composition>

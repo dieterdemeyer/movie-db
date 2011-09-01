@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ui:composition template="/movie/template.xhtml" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:h="http://java.sun.com/jsf/html">
+
+    <ui:param name="title" value="#{titles.movie_add}" />
+
+    <ui:define name="body">
+		<fieldset>
+		<ul>
+		    <li>
+		    	<h:outputLabel for="imdb" value="#{labels.imdb}:" />
+		    	<h:inputText id="imdb" value="#{addController.movie.imdb}" />
+		    </li>
+		    <li>
+		    	<h:outputLabel for="title" value="#{labels.title}:" />
+		    	<h:inputText id="title" value="#{addController.movie.title}" />
+		    </li>
+		</ul>
+		<h:commandButton id="addButton" action="#{addController.save}" value="#{labels.add}" />
+		<h:commandButton id="cancelButton" action="movieOverview" value="#{labels.cancel}" />
+		</fieldset>
+	</ui:define>
+
+</ui:composition>

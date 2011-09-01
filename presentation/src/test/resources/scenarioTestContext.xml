@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:jdbc="http://www.springframework.org/schema/jdbc"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+    					http://www.springframework.org/schema/jdbc http://www.springframework.org/schema/jdbc/spring-jdbc-3.0.xsd">
+
+    <jdbc:embedded-database id="dataSource">
+        <jdbc:script location="file:../db/scripts/01_clean_schema.sql"/>
+        <jdbc:script location="file:../db/scripts/02_create.sql"/>
+        <jdbc:script location="file:../db/scripts/03_indexes.sql"/>
+    </jdbc:embedded-database>
+
+<!--
+    <bean id="dataSource" destroy-method="close" class="org.apache.commons.dbcp.BasicDataSource">
+            <property name="driverClassName" value="${database.driver}" />
+            <property name="url" value="jdbc:hsqldb:hsql://localhost/moviedb_scenario" />
+            <property name="username" value="sa" />
+            <property name="password" value="" />
+    </bean>
+-->
+
+    <bean class="be.dieterdemeyer.moviedb.jetty.JettyServer" init-method="start" destroy-method="stop">
+        <constructor-arg value="8081" />
+        <constructor-arg ref="dataSource" />
+    </bean>
+
+	<bean class="org.openqa.selenium.server.SeleniumServer" init-method="start" destroy-method="stop">
+		<constructor-arg>
+			<bean class="org.openqa.selenium.server.RemoteControlConfiguration">
+				<property name="port" value="4444" />
+				<property name="singleWindow" value="true" />
+				<property name="timeoutInSeconds" value="10" />
+			</bean>
+		</constructor-arg>
+	</bean>
+
+	<bean class="com.thoughtworks.selenium.DefaultSelenium" init-method="start" destroy-method="stop" lazy-init="true">
+		<constructor-arg>
+			<bean class="com.thoughtworks.selenium.HttpCommandProcessor">
+				<constructor-arg value="localhost" />
+				<constructor-arg value="4444" />
+				<constructor-arg value="*firefox c:/IdeaProjects/Environment/Cegeka/firefox/firefox.exe" />
+                <!--<constructor-arg value="*firefox C:/Program Files (x86)/Mozilla Firefox/firefox.exe" />-->
+				<constructor-arg value="http://localhost:8081" />
+			</bean>
+		</constructor-arg>
+	</bean>
+
+</beans>
