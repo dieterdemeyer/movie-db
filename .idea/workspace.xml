@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8e459e71-7199-4ad8-910a-74afb6a6621b" name="Default" comment="" />
+    <list default="true" id="8e459e71-7199-4ad8-910a-74afb6a6621b" name="Default" comment="added git ignore file">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/presentation.iml" afterPath="$PROJECT_DIR$/presentation.iml" />
+    </list>
     <ignored path="Bibliothouris.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -232,7 +235,7 @@
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
   <component name="ProjectReloadState">
-    <option name="STATE" value="2" />
+    <option name="STATE" value="0" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
@@ -247,6 +250,8 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -335,10 +340,22 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MovieDB" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="movie-db" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value=".idea" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="Favorites" />
     </panes>
   </component>
@@ -357,9 +374,9 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="dynamic.classpath" value="false" />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
+    <property name="dynamic.classpath" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
@@ -371,15 +388,6 @@
     </key>
   </component>
   <component name="RunManager" selected="Ant build.MovieDB - Stop database server">
-    <configuration default="true" type="HandyEdit.AntRun" factoryName="Ant build" debug-port="25000" max-memory="256" logging-level="0">
-      <method>
-        <option name="AntTarget" enabled="false" />
-        <option name="BuildArtifacts" enabled="false" />
-        <option name="Make" enabled="true" />
-        <option name="Maven.BeforeRunTask" enabled="false" />
-        <option name="PhingTarget" enabled="false" />
-      </method>
-    </configuration>
     <configuration default="true" type="MavenRunConfiguration" factoryName="Maven">
       <MavenSettings>
         <option name="myGeneralSettings">
@@ -428,6 +436,15 @@
         <option name="PhingTarget" enabled="false" />
       </method>
     </configuration>
+    <configuration default="true" type="HandyEdit.AntRun" factoryName="Ant build" debug-port="25000" max-memory="256" logging-level="0">
+      <method>
+        <option name="AntTarget" enabled="false" />
+        <option name="BuildArtifacts" enabled="false" />
+        <option name="Make" enabled="true" />
+        <option name="Maven.BeforeRunTask" enabled="false" />
+        <option name="PhingTarget" enabled="false" />
+      </method>
+    </configuration>
     <configuration default="true" type="Remote" factoryName="Remote">
       <option name="USE_SOCKET_TRANSPORT" value="true" />
       <option name="SERVER_MODE" value="false" />
@@ -469,30 +486,6 @@
         <option name="PhingTarget" enabled="false" />
       </method>
     </configuration>
-    <configuration default="true" type="JettyConfiguration" factoryName="Local">
-      <deployment />
-      <server-settings>
-        <data>
-          <option name="configFiles">
-            <list>
-              <JettyConfigFile>
-                <option name="active" value="true" />
-                <option name="path" value="etc\jetty-jmx.xml" />
-              </JettyConfigFile>
-            </list>
-          </option>
-        </data>
-      </server-settings>
-      <predefined_log_file id="Jetty" enabled="true" />
-      <extension name="coverage" enabled="false" merge="false" />
-      <method>
-        <option name="AntTarget" enabled="false" />
-        <option name="BuildArtifacts" enabled="false" />
-        <option name="Make" enabled="true" />
-        <option name="Maven.BeforeRunTask" enabled="false" />
-        <option name="PhingTarget" enabled="false" />
-      </method>
-    </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <extension name="coverage" enabled="false" merge="false" />
       <option name="MAIN_CLASS_NAME" />
@@ -514,36 +507,22 @@
         <option name="PhingTarget" enabled="false" />
       </method>
     </configuration>
-    <configuration default="true" type="JettyConfiguration" factoryName="Remote">
-      <option name="LOCAL" value="false" />
+    <configuration default="true" type="JettyConfiguration" factoryName="Local">
       <deployment />
       <server-settings>
         <data>
-          <option name="targets">
+          <option name="configFiles">
             <list>
-              <MultiTargetRemoteStagingTarget>
-                <option name="name" value="STAGING" />
-              </MultiTargetRemoteStagingTarget>
-              <MultiTargetRemoteStagingTarget>
-                <option name="name" value="WEBAPPS" />
-              </MultiTargetRemoteStagingTarget>
-              <MultiTargetRemoteStagingTarget>
-                <option name="name" value="CONTEXT" />
-              </MultiTargetRemoteStagingTarget>
+              <JettyConfigFile>
+                <option name="active" value="true" />
+                <option name="path" value="etc\jetty-jmx.xml" />
+              </JettyConfigFile>
             </list>
           </option>
         </data>
       </server-settings>
       <predefined_log_file id="Jetty" enabled="true" />
-      <extension name="coverage" />
-      <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="51401" />
-        <option name="TRANSPORT" value="0" />
-        <option name="LOCAL" value="false" />
-      </RunnerSettings>
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Debug" />
-      <ConfigurationWrapper RunnerId="Run" />
+      <extension name="coverage" enabled="false" merge="false" />
       <method>
         <option name="AntTarget" enabled="false" />
         <option name="BuildArtifacts" enabled="false" />
@@ -579,16 +558,30 @@
         <option name="PhingTarget" enabled="false" />
       </method>
     </configuration>
-    <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Remote">
+    <configuration default="true" type="JettyConfiguration" factoryName="Remote">
       <option name="LOCAL" value="false" />
+      <deployment />
       <server-settings>
-        <option name="DEPLOY_TOMCAT_APPS" value="false" />
-        <option name="BASE_DIRECTORY_NAME" value="_Bibliothouris_2" />
+        <data>
+          <option name="targets">
+            <list>
+              <MultiTargetRemoteStagingTarget>
+                <option name="name" value="WEBAPPS" />
+              </MultiTargetRemoteStagingTarget>
+              <MultiTargetRemoteStagingTarget>
+                <option name="name" value="STAGING" />
+              </MultiTargetRemoteStagingTarget>
+              <MultiTargetRemoteStagingTarget>
+                <option name="name" value="CONTEXT" />
+              </MultiTargetRemoteStagingTarget>
+            </list>
+          </option>
+        </data>
       </server-settings>
-      <predefined_log_file id="TOMCAT_LOCALHOST_LOG_ID" enabled="true" />
+      <predefined_log_file id="Jetty" enabled="true" />
       <extension name="coverage" />
       <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="51410" />
+        <option name="DEBUG_PORT" value="51401" />
         <option name="TRANSPORT" value="0" />
         <option name="LOCAL" value="false" />
       </RunnerSettings>
@@ -649,6 +642,30 @@
           <option name="PROGRAM_PARAMETERS" value=" -Dcatalina.base=C:\Users\bkdem\.IntelliJIdea10\system\tomcat\_Bibliothouris &quot;-Dcatalina.home=C:\Program Files (x86)\Apache Software Foundation\Tomcat 7.0&quot; &quot;-Djava.io.tmpdir=C:\Program Files (x86)\Apache Software Foundation\Tomcat 7.0\temp&quot; -cp &quot;C:\Program Files (x86)\Apache Software Foundation\Tomcat 7.0\bin\bootstrap.jar;C:\Program Files (x86)\Apache Software Foundation\Tomcat 7.0\bin\tomcat-juli.jar&quot; org.apache.catalina.startup.Bootstrap stop" />
         </SHUTDOWN>
       </ConfigurationWrapper>
+      <method>
+        <option name="AntTarget" enabled="false" />
+        <option name="BuildArtifacts" enabled="false" />
+        <option name="Make" enabled="true" />
+        <option name="Maven.BeforeRunTask" enabled="false" />
+        <option name="PhingTarget" enabled="false" />
+      </method>
+    </configuration>
+    <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Remote">
+      <option name="LOCAL" value="false" />
+      <server-settings>
+        <option name="DEPLOY_TOMCAT_APPS" value="false" />
+        <option name="BASE_DIRECTORY_NAME" value="_Bibliothouris_2" />
+      </server-settings>
+      <predefined_log_file id="TOMCAT_LOCALHOST_LOG_ID" enabled="true" />
+      <extension name="coverage" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="51410" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="false" />
+      </RunnerSettings>
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Debug" />
+      <ConfigurationWrapper RunnerId="Run" />
       <method>
         <option name="AntTarget" enabled="false" />
         <option name="BuildArtifacts" enabled="false" />
@@ -833,18 +850,16 @@
       <window_info id="Phing Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32995737" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2989593" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.18128343" sideWeight="0.75875115" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32995737" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JSF" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.17697228" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24124882" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18074866" sideWeight="0.7606433" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1828877" sideWeight="0.7606433" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2144385" sideWeight="0.7606433" order="0" side_tool="false" content_ui="tabs" />
@@ -852,6 +867,8 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2989593" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24124882" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -932,37 +949,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/db/server.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="32" selection-start="145" selection-end="145" vertical-scroll-proportion="0.043816943">
-          <folding />
-        </state>
+        <state line="3" column="32" selection-start="145" selection-end="145" vertical-scroll-proportion="0.043816943" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/presentation/src/main/webapp/index.xhtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="7" selection-start="406" selection-end="406" vertical-scroll-proportion="0.14955135">
-          <folding />
-        </state>
+        <state line="10" column="7" selection-start="406" selection-end="406" vertical-scroll-proportion="0.14955135" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/presentation/src/test/java/be/dieterdemeyer/moviedb/presentation/scenario/movie/AddMovieScenarioTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="0" selection-start="702" selection-end="702" vertical-scroll-proportion="0.3586498">
-          <folding />
-        </state>
+        <state line="23" column="0" selection-start="702" selection-end="702" vertical-scroll-proportion="0.3586498" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/db/scripts/03_indexes.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="0" selection-start="119" selection-end="119" vertical-scroll-proportion="0.029211296">
-          <folding />
-        </state>
+        <state line="2" column="0" selection-start="119" selection-end="119" vertical-scroll-proportion="0.029211296" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/db/scripts/02_create.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="2" selection-start="245" selection-end="245" vertical-scroll-proportion="0.16066213">
-          <folding />
-        </state>
+        <state line="11" column="2" selection-start="245" selection-end="245" vertical-scroll-proportion="0.16066213" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/db/scripts/01_clean_schema.sql">
@@ -972,81 +979,57 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/presentation/src/test/java/be/dieterdemeyer/moviedb/jetty/JettyServer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="103" column="28" selection-start="2749" selection-end="2749" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="103" column="28" selection-start="2749" selection-end="2749" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/db/build.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="60" column="42" selection-start="2476" selection-end="2497" vertical-scroll-proportion="-20.125">
-          <folding />
-        </state>
+        <state line="60" column="42" selection-start="2476" selection-end="2497" vertical-scroll-proportion="-20.125" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/presentation/src/main/webapp/movie/template.xhtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="17" selection-start="542" selection-end="542" vertical-scroll-proportion="-8.75">
-          <folding />
-        </state>
+        <state line="14" column="17" selection-start="542" selection-end="542" vertical-scroll-proportion="-8.75" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/presentation/src/main/webapp/movie/overview.xhtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="17" selection-start="933" selection-end="933" vertical-scroll-proportion="-13.75">
-          <folding />
-        </state>
+        <state line="22" column="17" selection-start="933" selection-end="933" vertical-scroll-proportion="-13.75" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/presentation/src/main/webapp/about/template.xhtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="17" selection-start="420" selection-end="420" vertical-scroll-proportion="-8.125">
-          <folding />
-        </state>
+        <state line="13" column="17" selection-start="420" selection-end="420" vertical-scroll-proportion="-8.125" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/presentation/src/main/webapp/static/css/default.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="20" selection-start="237" selection-end="237" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="12" column="20" selection-start="237" selection-end="237" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/infrastructure/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="19" selection-start="1145" selection-end="1145" vertical-scroll-proportion="-20.875">
-          <folding />
-        </state>
+        <state line="40" column="19" selection-start="1145" selection-end="1145" vertical-scroll-proportion="-20.875" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/infrastructure/src/main/java/be/dieterdemeyer/moviedb/presentation/resolver/CdiScopeMetadataResolver.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="13" selection-start="375" selection-end="375" vertical-scroll-proportion="0.07874016">
-          <folding />
-        </state>
+        <state line="9" column="13" selection-start="375" selection-end="375" vertical-scroll-proportion="0.07874016" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/presentation/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="69" column="21" selection-start="1767" selection-end="1871" vertical-scroll-proportion="-16.875">
-          <folding />
-        </state>
+        <state line="69" column="21" selection-start="1767" selection-end="1871" vertical-scroll-proportion="-16.875" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/src/main/java/be/dieterdemeyer/moviedb/application/MovieApplicationService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="0" selection-start="250" selection-end="250" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
+        <state line="10" column="0" selection-start="250" selection-end="250" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/presentation/src/main/webapp/template.xhtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="14" selection-start="1587" selection-end="1587" vertical-scroll-proportion="0.6646526">
-          <folding />
-        </state>
+        <state line="44" column="14" selection-start="1587" selection-end="1587" vertical-scroll-proportion="0.6646526" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/infrastructure/src/main/resources/applicationContext.xml">
@@ -1054,39 +1037,31 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="81" selection-start="2702" selection-end="2702" vertical-scroll-proportion="0.6454265">
-          <folding />
-        </state>
+        <state line="48" column="81" selection-start="2702" selection-end="2702" vertical-scroll-proportion="0.6454265" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/domain/src/main/resources/META-INF/persistence.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="4" selection-start="293" selection-end="293" vertical-scroll-proportion="0.08946322">
-          <folding />
-        </state>
+        <state line="6" column="4" selection-start="293" selection-end="293" vertical-scroll-proportion="0.08946322" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/presentation/src/main/webapp/WEB-INF/web.xml">
       <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorReferencesProvider">
         <state />
       </provider>
-      <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorProvider">
+      <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleGeneralEditorProvider">
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="4" selection-start="1242" selection-end="1243" vertical-scroll-proportion="0.39148074">
-          <folding />
-        </state>
+        <state line="33" column="4" selection-start="1242" selection-end="1243" vertical-scroll-proportion="0.39148074" />
       </provider>
-      <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleGeneralEditorProvider">
+      <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorProvider">
         <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="19" selection-start="74" selection-end="74" vertical-scroll-proportion="0.057915058">
-          <folding />
-        </state>
+        <state line="3" column="19" selection-start="74" selection-end="74" vertical-scroll-proportion="0.057915058" />
       </provider>
     </entry>
   </component>
